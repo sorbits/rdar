@@ -4,14 +4,14 @@ Setting a constraint on a view’s size and later updating the constraints does 
 
 # Steps to Reproduce
 
-Compile and run [`main.mm`](ConstraintBasedLayout/main.mm):
+Compile and run [`main.mm`](main.mm):
 
     clang++ -fobjc-arc -framework Cocoa -o /tmp/main.exe main.mm
     /tmp/main.exe
 
 After running the program it will show a window with two boxes separated by a divider line:
 
-![Horizontal Layout](https://raw.github.com/sorbits/rdar/master/ConstraintBasedLayout/images/Horizontal.png)
+![Horizontal Layout](images/Horizontal.png)
 
 The essential part of the layout is the following line:
 
@@ -25,7 +25,7 @@ Now click the window to flip the layout, so instead we use:
 
 The window shows the two boxes stacked vertically, with the one point divider to separate them, as shown here:
 
-![VerticalAmbiguity](https://raw.github.com/sorbits/rdar/master/ConstraintBasedLayout/images/Vertical.png)
+![VerticalAmbiguity](images/Vertical.png)
 
 # Actual Result
 
@@ -45,7 +45,7 @@ Ambiguity warning:
 
 Enabling `NSConstraintBasedLayoutVisualizeMutuallyExclusiveConstraints` visualizes the issue like this:
 
-![VerticalAmbiguity](https://raw.github.com/sorbits/rdar/master/ConstraintBasedLayout/images/VerticalAmbiguity.png)
+![VerticalAmbiguity](images/VerticalAmbiguity.png)
 
 # Notes
 

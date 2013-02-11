@@ -4,7 +4,7 @@ Using a for-in loop with a ternary operator (`?:`) will under certain circumstan
 
 # Steps to Reproduce
 
-Compile and run [`main.m`](for-in-with-ARC/main.m):
+Compile and run [`main.m`](main.m):
 
 	CC=$(xcode-select -print-path)/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
 	"$CC" --version

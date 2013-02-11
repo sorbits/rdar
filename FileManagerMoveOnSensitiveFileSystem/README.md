@@ -4,7 +4,7 @@ Using NSFileManager to rename a file, only making case changes, on a HFS+ non-se
 
 # Steps to Reproduce
 
-Compile and run [`main.m`](FileManagerMoveOnSensitiveFileSystem/main.mm):
+Compile and run [`main.m`](main.m):
 
 	# Create a disk image with non-sensitive file system
 	hdiutil create -size 1m -type UDIF -fs JHFS+ -volname "test" -ov -attach "$TMPDIR/test.dmg"

@@ -4,14 +4,14 @@ When an `NSTextField` with `NSBackgroundStyleRaised` redraws itself in an inacti
 
 # Steps to Reproduce
 
-Compile and run [`main.mm`](WrongRenderingOfInactiveNSTextField/main.mm):
+Compile and run [`main.mm`](main.mm):
 
     clang++ -fobjc-arc -framework Cocoa -o /tmp/TestApp main.mm
     /tmp/TestApp
 
 The program opens a window with two gradient views each containing an `NSTextField`. Their setup is identical except the right one is returning `YES` from `isOpaque`.
 
-![Active](https://raw.github.com/sorbits/rdar/master/WrongRenderingOfInactiveNSTextField/images/active.png)
+![Active](images/active.png)
 
 Click outside the window to deactivate it.
 
@@ -23,7 +23,7 @@ Both labels “fade” together with the window frame.
 
 Only the left label will fade.
 
-![Inactive](https://raw.github.com/sorbits/rdar/master/WrongRenderingOfInactiveNSTextField/images/inactive.png)
+![Inactive](images/inactive.png)
 
 # Notes
 
